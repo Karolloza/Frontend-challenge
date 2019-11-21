@@ -1,0 +1,22 @@
+@import '../../../styles/styles.less';
+
+.card {
+  border: 1px solid red;
+  display: inline-flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 10px auto;
+  align-items: center;
+  padding: 15px 10px;
+
+  @media screen and (max-width: @tablet) {
+      width: 45%;
+  }
+
+  @media screen and (max-width: @mobile) {
+      width: 100%;
+  }
+}
+
+
+

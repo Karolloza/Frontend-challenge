@@ -1,0 +1,8 @@
+.headerContainer {
+  display: flex;
+}
+@media screen and (max-width: 640px) {
+  .headerContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,16 @@
+.inputGroup {
+  display: flex;
+  flex: 2;
+  padding: 15px;
+  margin-left: 5px;
+}
+@media screen and (max-width: 1024px) {
+  .inputGroup {
+    flex: 1;
+  }
+}
+.inputGroup Input {
+  width: 90%;
+  border-radius: 30px;
+  padding: 10px 15px;
+}

@@ -1,15 +1,23 @@
 import React from 'react'
-import Layout from './js/common/Layout/Layout'
-import { useSelector, useDispatch } from 'react-redux'
-import {setUser} from './js/redux/actions/postUserAction'
+
+import Header from './js/components/Header/Header'
+import MainContent from './js/components/MainContent/MainContent'
+
 function App() {
-    const mySelect = useSelector(state => state.users)
-    const dispatch = useDispatch()
-    console.log(mySelect)
+    const data = {
+            userId: 1,
+            id: 1,
+            title: 'example title',
+            body: 'eact Hook useEffect has missing dependencies: \'dispatch\' and \'sampleState.userPosts\'. Either include the'
+        }
+
   return (
-      <Layout>
-          <div onClick={() => dispatch(setUser('example name'))}>App</div>
-      </Layout>
+      <div>
+              <Header />
+              <MainContent />
+              <div>App</div>
+      </div>
+
   );
 }
 

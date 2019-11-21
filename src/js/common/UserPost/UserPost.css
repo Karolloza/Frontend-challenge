@@ -1,0 +1,19 @@
+.card {
+  border: 1px solid red;
+  display: inline-flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 10px auto;
+  align-items: center;
+  padding: 15px 10px;
+}
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .card {
+    width: 100%;
+  }
+}
