@@ -1,1 +1,4 @@
 export const FETCH_POSTS = 'FETCH_POSTS';
+export const FETCH_POST_DETAILS = 'FETCH_POST_DETAILS';
+export const SEARCH_VALUE = 'SEARCH_VALUE';
+export const USER_AUTH = 'USER_AUTH'

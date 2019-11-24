@@ -1,11 +1,15 @@
 .card {
   border: 1px solid red;
-  display: inline-flex;
   flex-direction: column;
   width: 30%;
   margin: 10px auto;
-  align-items: center;
   padding: 15px 10px;
+}
+.card :nth-child(1) {
+  padding: 10px;
+}
+.card Button {
+  margin: 10px;
 }
 @media screen and (max-width: 1024px) {
   .card {

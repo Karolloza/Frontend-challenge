@@ -1,5 +1,4 @@
-import React from 'react'
-import { FETCH_POSTS } from './types'
+import { FETCH_POSTS, FETCH_POST_DETAILS } from './types'
 
 export const fetchPostsAction = () => dispatch => {
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -15,4 +14,13 @@ export const fetchPostsAction = () => dispatch => {
                     data: error
                 })
             })
+}
+
+export const fetchPostDetails = (id) => dispatch => {
+    fetch(`https://jsonplaceholder.typicode.com${id}`)
+        .then(res => res.json())
+        .then(data => dispatch({
+            type: FETCH_POST_DETAILS,
+            data: data
+        }))
 }

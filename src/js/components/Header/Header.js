@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import LoginBtn from '../../common/LoginBtn/LoginBtn'
 import SearchBar from '../../components/SearchBar/SearchBar.js'
 
@@ -6,11 +7,14 @@ import './Header.css'
 
 const Header = () => {
     const handleLogin = () => {
-        console.log('logged in')
+        sessionStorage.setItem('auth', JSON.stringify(false))
     }
+
     return(
         <div className='headerContainer'>
-            <LoginBtn btnHandler={handleLogin}/>
+            <Link to='/login'>
+                <LoginBtn btnHandler={handleLogin} text='Logout'/>
+            </Link>
             <SearchBar />
         </div>
     )

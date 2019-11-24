@@ -1,17 +1,21 @@
-import { FETCH_POSTS } from '../actions/types'
+import { FETCH_POSTS, FETCH_POST_DETAILS } from '../actions/types'
 
 const initialState = {
-    userPosts: []
+    userPosts: [],
+    postDetails: {}
 }
 
 export default (state = initialState, action) => {
     switch(action.type) {
         case FETCH_POSTS:
-            console.log('reducer')
-            console.log(action.data)
             return {
                 ...state,
                 userPosts: action.data
+            };
+        case FETCH_POST_DETAILS:
+            return {
+                ...state,
+                postDetails: action.data
             };
         default:
             return state
