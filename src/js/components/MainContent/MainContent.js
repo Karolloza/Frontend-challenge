@@ -6,17 +6,18 @@ import { fetchPostsAction } from '../../redux/actions/userPostAction'
 
 const MainContent = ({ fetchPostsAction }) => {
     const postsData = useSelector(state => state.userPosts)
+    const filteredByUserId = postsData.userPosts.filter(post => post.userId === parseInt(sessionStorage.getItem('userId')))
     const search = useSelector(state => state.searchValue.searchValue)
 
     useEffect(() => {
         fetchPostsAction()
-    },[search])
+    },[])
 
     return(
         <div className='mainContentContainer'>
             {
                 postsData.userPosts.length > 0 &&
-                postsData.userPosts.filter(item =>
+                filteredByUserId.filter(item =>
                     item.body.indexOf(search) !== -1 ||
                     item.title.indexOf(search) !== -1 ).map(post =>
                 <UserPost

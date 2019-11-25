@@ -12,14 +12,14 @@ const PostDetails = ({ fetchPostDetails, ...props }) => {
         fetchPostDetails(window.location.pathname)
     }, [])
     return(
-        <div>
-            <LoginBtn text='Go back' stylesClass='return' btnHandler={() => props.history.goBack()}/>
+        <div className='postDetailsContainer'>
+            <LoginBtn text='Go back' stylesClass='goBack' btnHandler={() => props.history.goBack()}/>
             <h1>Details</h1>
             <div className='details'>
-                <div>UserId: {userId}</div>
-                <div>Id: {id}</div>
-                <div>Title: {title}</div>
-                <p>Body: {body}</p>
+                <div><b>UserId:</b> {userId}</div>
+                <div><b>Id:</b> {id}</div>
+                <div><b>Title:</b> {title}</div>
+                <p><b>Body:</b> {body}</p>
             </div>
         </div>
     )

@@ -1,15 +1,24 @@
 .card {
-  border: 1px solid red;
   flex-direction: column;
   width: 30%;
   margin: 10px auto;
   padding: 15px 10px;
+  box-shadow: 0px 0px 5px 1px #003954;
+  background-color: #e3f8ff;
 }
 .card :nth-child(1) {
   padding: 10px;
 }
 .card Button {
-  margin: 10px;
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background-color: #a1e0f5;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 15px;
+}
+.card Button:hover {
+  background-color: #019ad2;
 }
 @media screen and (max-width: 1024px) {
   .card {

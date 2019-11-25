@@ -7,7 +7,9 @@
   margin: 15px;
   flex: 1;
   padding: 10px;
+  width: 90%;
 }
 .loginBtn:hover {
   background-color: #0f94bf;
+  cursor: pointer;
 }

@@ -1,6 +1,12 @@
 .headerContainer {
   display: flex;
 }
+.headerContainer a {
+  flex: 1;
+}
+.headerContainer a LoginBtn {
+  width: 100%;
+}
 @media screen and (max-width: 640px) {
   .headerContainer {
     flex-direction: column;

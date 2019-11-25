@@ -18,12 +18,13 @@ ReactDOM.render(
         <BrowserRouter>
             <Layout>
                 <Switch>
+
                     <Route exact path='/login' component={Login} />
                     {!JSON.parse(sessionStorage.getItem('auth')) && <Redirect to='/login' /> }
-
                     <Route exact path='/' component={App} />
                     <Route exact path='/posts/:id' component={PostDetails} />
-                    <Route exact path='/notFound' component={NotFound} />
+                    <Route exact path='*' component={NotFound} />
+
                 </Switch>
             </Layout>
         </BrowserRouter>
