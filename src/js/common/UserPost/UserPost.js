@@ -3,6 +3,10 @@ import { Card, Button, CardHeader, CardBody, CardTitle } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import './UserPost.css'
 
+export const add = (a, b) => {
+    return a + b
+}
+
 const UserPost = ({ userId, title, postId, body }) => {
     return(
         <Card className='card'>
@@ -17,7 +21,6 @@ const UserPost = ({ userId, title, postId, body }) => {
                     >
                         <Button>details</Button>
                     </Link>
-
             </CardBody>
         </Card>
     )

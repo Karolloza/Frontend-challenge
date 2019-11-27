@@ -12,10 +12,12 @@ const SearchBar = () => {
         <InputGroup className='inputGroup'>
             <Input
                 placeholder="search"
+                label='search'
                 value={inputValue}
                 onChange={(e) =>
                 dispatch(searchValueAction(e.target.value))}
             />
+            a
         </InputGroup>
     )
 }

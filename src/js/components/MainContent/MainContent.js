@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, connect } from 'react-redux'
 import UserPost from '../../common/UserPost/UserPost'
 import { fetchPosts } from '../../../store'
-import './mainContent.less'
+import './mainContent.css'
 
 const MainContent = ({ fetchPosts }) => {
     const postsData = useSelector(state => state.userPosts)
