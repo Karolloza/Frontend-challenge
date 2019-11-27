@@ -1,15 +1,15 @@
 import React, {useEffect} from 'react'
 import {connect, useSelector} from 'react-redux'
-import { fetchPostDetails } from '../../redux/actions/userPostAction.js'
+import { fetchDetails } from '../../../store.js'
 import LoginBtn from '../../common/LoginBtn/LoginBtn'
 
 import './PostDetails.css'
 
-const PostDetails = ({ fetchPostDetails, ...props }) => {
+const PostDetails = ({ fetchDetails, ...props }) => {
     const { userId, id, title, body } = useSelector( state => state.userPosts.postDetails)
 
     useEffect(() => {
-        fetchPostDetails(window.location.pathname)
+        fetchDetails(window.location.pathname)
     }, [])
     return(
         <div className='postDetailsContainer'>
@@ -25,4 +25,4 @@ const PostDetails = ({ fetchPostDetails, ...props }) => {
     )
 }
 
-export default connect(null, {fetchPostDetails})(PostDetails)
+export default connect(null, { fetchDetails })(PostDetails)

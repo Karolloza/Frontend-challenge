@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 import { useSelector, connect } from 'react-redux'
 import UserPost from '../../common/UserPost/UserPost'
-import './mainContent.css'
-import { fetchPostsAction } from '../../redux/actions/userPostAction'
+import { fetchPosts } from '../../../store'
+import './mainContent.less'
 
-const MainContent = ({ fetchPostsAction }) => {
+const MainContent = ({ fetchPosts }) => {
     const postsData = useSelector(state => state.userPosts)
     const filteredByUserId = postsData.userPosts.filter(post => post.userId === parseInt(sessionStorage.getItem('userId')))
     const search = useSelector(state => state.searchValue.searchValue)
 
     useEffect(() => {
-        fetchPostsAction()
+        fetchPosts()
     },[])
 
     return(
@@ -30,4 +30,4 @@ const MainContent = ({ fetchPostsAction }) => {
         </div>
     )
 }
-export default connect(null, { fetchPostsAction })(MainContent)
+export default connect(null, { fetchPosts })(MainContent)
